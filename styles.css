@@ -87,6 +87,23 @@ summary:focus{outline:2px solid var(--blue-300); outline-offset:4px; border-radi
 .links a{color:var(--blue-700)}
 .smallprint{font-size:.9rem; color:#335}
 
+/* Prevención DME */
+#prevencion-dme .card__details:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+#prevencion-dme h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: var(--blue-700);
+}
+
+#prevencion-dme .inline-actions {
+  margin: 8px 0 16px 0;
+}
+
 /* Gallery */
 .gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:12px; margin-top:12px}
 .gallery figure{margin:0; background:var(--blue-100); border-radius:10px; overflow:hidden; box-shadow:var(--shadow); transition:transform .2s ease}
@@ -94,10 +111,41 @@ summary:focus{outline:2px solid var(--blue-300); outline-offset:4px; border-radi
 .gallery figure:hover img{transform:scale(1.05)}
 .gallery figcaption{padding:6px 8px; font-size:.85rem; color:var(--blue-700)}
 
+/* Estilo específico para la galería de estiramientos */
+#galeria-est {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+#galeria-est .gallery__item img {
+  height: 180px;
+  object-fit: contain;
+  background: white;
+}
+
 /* Refs */
 .refs{margin-top:60px}
 .refs ul{padding-left:18px}
 .refs li{margin:6px 0}
+
+/* Imagen OMS */
+.image-container {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.oms-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  max-height: 500px;
+  object-fit: contain;
+  background: white;
+  padding: 8px;
+}
 
 /* Footer */
 .site-footer{margin:40px 0 20px; text-align:center; color:var(--blue-700)}

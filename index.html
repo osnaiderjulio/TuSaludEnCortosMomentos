@@ -1,237 +1,557 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tu salud en cortos momentos</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="brand">
-      <div class="qr-share" title="Escanea para abrir esta web">
-        <canvas id="qrCanvas" width="64" height="64" aria-label="Código QR para compartir la web"></canvas>
-        <span class="qr-caption">Compartir</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tu salud en cortos momentos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="qr-share" title="Escanea para abrir esta web">
+          <canvas
+            id="qrCanvas"
+            width="64"
+            height="64"
+            aria-label="Código QR para compartir la web"
+          ></canvas>
+          <span class="qr-caption">Compartir</span>
+        </div>
+        <img
+          class="logo-img"
+          src="img/Imagen1.png"
+          alt="ECR - Escuela Colombiana de Rehabilitación"
+        />
+        <h1 class="title">Tu salud en cortos momentos</h1>
       </div>
-      <img class="logo-img" src="img/Imagen1.png" alt="ECR - Escuela Colombiana de Rehabilitación" />
-      <h1 class="title">Tu salud en cortos momentos</h1>
-    </div>
-    <nav class="nav" aria-label="Secciones">
-      <a href="#estiramientos">Estiramientos</a>
-      <a href="#gimnasia-cerebral">Gimnasia cerebral</a>
-      <a href="#prevencion-dme">Prevención DME</a>
-      <a href="#area-trabajo">Área de trabajo</a>
-      <a href="#referencias">Referencias</a>
-    </nav>
-    <div class="actions">
-      <input id="search" type="search" placeholder="Buscar contenido..." aria-label="Buscar" />
-    </div>
-  </header>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#estiramientos">Estiramientos</a>
+        <a href="#gimnasia-cerebral">Gimnasia cerebral</a>
+        <a href="#prevencion-dme">Prevención DME</a>
+        <a href="#area-trabajo">Área de trabajo</a>
+        <a href="#referencias">Referencias</a>
+      </nav>
+      <div class="actions">
+        <input
+          id="search"
+          type="search"
+          placeholder="Buscar contenido..."
+          aria-label="Buscar"
+        />
+      </div>
+    </header>
 
-  <main class="container">
-    <section class="cards" aria-live="polite">
-      <!-- 1. Estiramientos -->
-      <article id="estiramientos" class="card card--estiramientos" data-tags="estiramientos fisioterapia cuerpo estira cuida">
-        <h2 class="card__title">Estira y Cuida tu Cuerpo: Estiramientos</h2>
-        <p class="card__subtitle">Realizar 3 series de 10 repeticiones</p>
-        <details class="card__details" open>
-          <summary>Descripción y recursos</summary>
-          <p>Fisioterapia, D. (23 de enero de 2020). Estiramientos - Dinámica Fisioterapia - DinamiBlog. Fisioterapia dinámica.</p>
-          <p><a class="btn" href="https://www.dinamicafisioterapia.com/estiramientos/" target="_blank" rel="noopener">Artículo</a></p>
-          <p><a class="btn" href="https://www.youtube.com/watch?v=lRCgTDXnvJk" target="_blank" rel="noopener">Video: Estiramientos</a></p>
+    <main class="container">
+      <section class="cards" aria-live="polite">
+        <!-- 1. Estiramientos -->
+        <article
+          id="estiramientos"
+          class="card card--estiramientos"
+          data-tags="estiramientos fisioterapia cuerpo estira cuida"
+        >
+          <h2 class="card__title">Estira y Cuida tu Cuerpo: Estiramientos</h2>
+          <p class="card__subtitle">Realizar 3 series de 10 repeticiones</p>
+          <details class="card__details" open>
+            <summary>Descripción y recursos</summary>
+            <p>
+              Fisioterapia, D. (23 de enero de 2020). Estiramientos - Dinámica
+              Fisioterapia - DinamiBlog. Fisioterapia dinámica.
+            </p>
+            <p>
+              <a
+                class="btn"
+                href="https://www.dinamicafisioterapia.com/estiramientos/"
+                target="_blank"
+                rel="noopener"
+                >Artículo</a
+              >
+            </p>
+
+            <div class="inline-actions">
+              <button
+                id="btn-galeria-est"
+                class="btn btn-secondary"
+                type="button"
+                aria-expanded="false"
+                aria-controls="galeria-est"
+              >
+                Ver imágenes
+              </button>
+            </div>
+            <div id="galeria-est" class="gallery" hidden aria-live="polite">
+              <div class="gallery__item">
+                <img
+                  src="img/WhatsApp Image 2025-10-05 at 8.41.42 PM (2).jpeg"
+                  alt="Estiramiento 1"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="img/WhatsApp Image 2025-10-05 at 8.41.42 PM (3).jpeg"
+                  alt="Estiramiento 2"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="img/WhatsApp Image 2025-10-05 at 8.41.42 PM (4).jpeg"
+                  alt="Estiramiento 3"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="img/WhatsApp Image 2025-10-05 at 8.41.42 PM.jpeg"
+                  alt="Estiramiento 4"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="img/WhatsApp Image 2025-10-05 at 8.41.43 PM (1).jpeg"
+                  alt="Estiramiento 5"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="img/WhatsApp Image 2025-10-05 at 8.41.43 PM (2).jpeg"
+                  alt="Estiramiento 6"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="img/WhatsApp Image 2025-10-05 at 8.41.43 PM.jpeg"
+                  alt="Estiramiento 7"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="img/WhatsApp Image 2025-10-05 at 8.41.43 PM (1).jpeg"
+                  alt="Estiramiento 7"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="img/WhatsApp Image 2025-10-05 at 8.41.43 PM (2).jpeg"
+                  alt="Estiramiento 8"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- 2. Gimnasia cerebral -->
+        <article
+          id="gimnasia-cerebral"
+          class="card card--gimnasia"
+          data-tags="mente cerebro memoria atencion creatividad razonamiento"
+        >
+          <h2 class="card__title">Ejercita tu mente: Gimnasia cerebral</h2>
+          <details class="card__details" open>
+            <summary>Información clave</summary>
+            <p>
+              <strong>Tu Cerebro:</strong> El Potencial Ilimitado que Llevas
+              Contigo. El entrenamiento cerebral es una realidad científicamente
+              comprobada que te permite desarrollar capacidades como mejorar tu
+              memoria, agudizar tu concentración, tomar mejores decisiones y
+              manejar el estrés con mayor facilidad.
+            </p>
+            <p>
+              <strong>El Entrenamiento marca la diferencia:</strong> Es
+              importante que realices actividades para entrenar tus habilidades,
+              así las mantienes y pueden mejorar con el tiempo. Existen
+              diferentes tipos de gimnasia cerebral.
+            </p>
+            <ul>
+              <li>
+                <strong>Entrenamiento neurocognitivo:</strong> ejercicios para
+                potenciar atención, memoria, velocidad mental, creatividad y
+                razonamiento.
+              </li>
+              <li>
+                <strong>Autoliderazgo emocional:</strong> técnicas para manejar
+                el estrés, reconocer emociones propias y ajenas, y comunicarte
+                asertivamente.
+              </li>
+              <li>
+                <strong>Hábitos saludables:</strong> alimentación cerebral,
+                actividad física y descanso reparador.
+              </li>
+            </ul>
+          </details>
+          <details class="card__details">
+            <summary>Actividades: Atención y concentración</summary>
+            <p>Trabajemos la atención y concentración.</p>
+          </details>
+          <details class="card__details">
+            <summary>Actividades: Memoria de trabajo</summary>
+            <p>
+              Completa los siguientes crucigramas numéricos con la cifra u
+              operación (suma o resta) que corresponda. Realiza los cálculos
+              mentalmente.
+            </p>
+            <p>
+              <em>Respuestas:</em> (espacio para completar en papel o
+              documento).
+            </p>
+          </details>
+          <details class="card__details">
+            <summary>Memoria Episódica</summary>
+            <p>
+              Guarda y organiza información sobre lo que hicimos hace poco, ya
+              sea minutos, horas, días, meses o años. También recuerda los
+              lugares que hemos visitado y las emociones que sentimos durante
+              esos momentos especiales.
+            </p>
+            <p><strong>¡Practiquemos!</strong></p>
+            <ul>
+              <li>
+                ¿Qué hiciste hace exactamente una semana? Escribe
+                secuencialmente tus actividades (excepto las laborales).
+              </li>
+              <li>
+                Recuerda etapas de tu vida de estudiante: 5 nombres de
+                compañeros/docentes y los episodios por los cuales los evocas.
+              </li>
+              <li>
+                Práctica de fin de semana: elige un sábado o domingo y detalla 3
+                episodios relevantes.
+              </li>
+            </ul>
+          </details>
+          <details class="card__details">
+            <summary>Memoria Visual</summary>
+            <p>
+              Conjunto desordenado de imágenes que corresponden a cuatro
+              categorías (una de ellas alimentos).
+            </p>
+            <ol>
+              <li>Descubre las otras categorías y cuenta las imágenes.</li>
+              <li>Memorízalas.</li>
+              <li>
+                Cubre las imágenes y completa una tabla con las categorías y
+                objetos recordados.
+              </li>
+            </ol>
+          </details>
+          <details class="card__details">
+            <summary>Creatividad</summary>
+            <p>
+              Explora actividades de creatividad libre: dibujo, escritura breve,
+              metáforas, o la técnica SCAMPER aplicada a una tarea diaria.
+            </p>
+            <p class="smallprint">
+              Tomado de: Braidot, N., &amp; Braidot, P. (s. f.). Manual de
+              Entrenamiento Cerebral. Braidot.com. Recuperado 30 de septiembre
+              de 2025, de
+              <a
+                href="https://campusvirtual.braidot.com/wp-content/uploads/2021/11/Manual-de-Entrenamiento-Cerebral.pdf"
+                target="_blank"
+                rel="noopener"
+                >enlace</a
+              >.
+            </p>
+          </details>
           <div class="inline-actions">
-            <button id="btn-galeria-est" class="btn btn-secondary" type="button" aria-expanded="false" aria-controls="galeria-est">Ver imágenes</button>
+            <button
+              id="btn-galeria-gc"
+              class="btn btn-secondary"
+              type="button"
+              aria-expanded="false"
+              aria-controls="galeria-gc"
+            >
+              Ver imágenes
+            </button>
           </div>
-          <div id="galeria-est" class="gallery" hidden aria-live="polite"></div>
-        </details>
-      </article>
+          <div id="galeria-gc" class="gallery" hidden aria-live="polite"></div>
+        </article>
 
-      <!-- 2. Gimnasia cerebral -->
-      <article id="gimnasia-cerebral" class="card card--gimnasia" data-tags="mente cerebro memoria atencion creatividad razonamiento">
-        <h2 class="card__title">Ejercita tu mente: Gimnasia cerebral</h2>
-        <details class="card__details" open>
-          <summary>Información clave</summary>
-          <p><strong>Tu Cerebro:</strong> El Potencial Ilimitado que Llevas Contigo. El entrenamiento cerebral es una realidad científicamente comprobada que te permite desarrollar capacidades como mejorar tu memoria, agudizar tu concentración, tomar mejores decisiones y manejar el estrés con mayor facilidad.</p>
-          <p><strong>El Entrenamiento marca la diferencia:</strong> Es importante que realices actividades para entrenar tus habilidades, así las mantienes y pueden mejorar con el tiempo. Existen diferentes tipos de gimnasia cerebral.</p>
-          <ul>
-            <li><strong>Entrenamiento neurocognitivo:</strong> ejercicios para potenciar atención, memoria, velocidad mental, creatividad y razonamiento.</li>
-            <li><strong>Autoliderazgo emocional:</strong> técnicas para manejar el estrés, reconocer emociones propias y ajenas, y comunicarte asertivamente.</li>
-            <li><strong>Hábitos saludables:</strong> alimentación cerebral, actividad física y descanso reparador.</li>
-          </ul>
-        </details>
-        <details class="card__details">
-          <summary>Actividades: Atención y concentración</summary>
-          <p>Trabajemos la atención y concentración.</p>
-        </details>
-        <details class="card__details">
-          <summary>Actividades: Memoria de trabajo</summary>
-          <p>Completa los siguientes crucigramas numéricos con la cifra u operación (suma o resta) que corresponda. Realiza los cálculos mentalmente.</p>
-          <p><em>Respuestas:</em> (espacio para completar en papel o documento).</p>
-        </details>
-        <details class="card__details">
-          <summary>Memoria Episódica</summary>
-          <p>Guarda y organiza información sobre lo que hicimos hace poco, ya sea minutos, horas, días, meses o años. También recuerda los lugares que hemos visitado y las emociones que sentimos durante esos momentos especiales.</p>
-          <p><strong>¡Practiquemos!</strong></p>
-          <ul>
-            <li>¿Qué hiciste hace exactamente una semana? Escribe secuencialmente tus actividades (excepto las laborales).</li>
-            <li>Recuerda etapas de tu vida de estudiante: 5 nombres de compañeros/docentes y los episodios por los cuales los evocas.</li>
-            <li>Práctica de fin de semana: elige un sábado o domingo y detalla 3 episodios relevantes.</li>
-          </ul>
-        </details>
-        <details class="card__details">
-          <summary>Memoria Visual</summary>
-          <p>Conjunto desordenado de imágenes que corresponden a cuatro categorías (una de ellas alimentos).</p>
-          <ol>
-            <li>Descubre las otras categorías y cuenta las imágenes.</li>
-            <li>Memorízalas.</li>
-            <li>Cubre las imágenes y completa una tabla con las categorías y objetos recordados.</li>
-          </ol>
-        </details>
-        <details class="card__details">
-          <summary>Creatividad</summary>
-          <p>Explora actividades de creatividad libre: dibujo, escritura breve, metáforas, o la técnica SCAMPER aplicada a una tarea diaria.</p>
-          <p class="smallprint">Tomado de: Braidot, N., &amp; Braidot, P. (s. f.). Manual de Entrenamiento Cerebral. Braidot.com. Recuperado 30 de septiembre de 2025, de <a href="https://campusvirtual.braidot.com/wp-content/uploads/2021/11/Manual-de-Entrenamiento-Cerebral.pdf" target="_blank" rel="noopener">enlace</a>.</p>
-        </details>
-        <div class="inline-actions">
-          <button id="btn-galeria-gc" class="btn btn-secondary" type="button" aria-expanded="false" aria-controls="galeria-gc">Ver imágenes</button>
-        </div>
-        <div id="galeria-gc" class="gallery" hidden aria-live="polite"></div>
-      </article>
+        <!-- 3. Videos de prevención DME -->
+        <article
+          id="prevencion-dme"
+          class="card card--dme"
+          data-tags="prevencion videos musculo esqueleticos de quervain tunel carpiano lumbalgia epicondilitis estres"
+        >
+          <h2 class="card__title">
+            Videos de prevención: Desórdenes Músculo Esqueléticos
+          </h2>
 
-      <!-- 3. Videos de prevención DME -->
-      <article id="prevencion-dme" class="card card--dme" data-tags="prevencion videos musculo esqueleticos de quervain tunel carpiano lumbalgia epicondilitis estres">
-        <h2 class="card__title">Videos de prevención: Desórdenes Músculo Esqueléticos</h2>
-        <details class="card__details" open>
-          <summary>Tenosinovitis de Quervain</summary>
-          <ul class="links">
-            <li><a href="https://youtu.be/N9LwlhHpSK0?si=6cdS-C_Q2Y2C17ac" target="_blank" rel="noopener">¡Trátate la TENOSINOVITIS DE QUERVAIN! Automasajes, Estiramientos y ejercicios</a></li>
-            <li><a href="https://youtu.be/itM4bIQlf50?si=kvi-bvszDtU_ZDf_" target="_blank" rel="noopener">Tendinitis de De Quervain - Tratamiento</a></li>
-          </ul>
-        </details>
-        <div class="inline-actions">
-          <button id="btn-galeria-dme" class="btn btn-secondary" type="button" aria-expanded="false" aria-controls="galeria-dme">Ver imágenes</button>
-        </div>
-        <div id="galeria-dme" class="gallery" hidden aria-live="polite"></div>
-        <details class="card__details">
-          <summary>Síndrome del túnel del carpo</summary>
-          <ul class="links">
-            <li><a href="https://youtu.be/dOBJpkWx1hE?si=bTKCD_CltZlELJRo" target="_blank" rel="noopener">Qué es, causas, síntomas y tratamiento</a></li>
-          </ul>
-        </details>
-        <details class="card__details">
-          <summary>Dolor inespecífico en la espalda baja</summary>
-          <ul class="links">
-            <li><a href="https://youtu.be/pzYRCIdjJzw?si=eRCNhFOaKXNt4LNo" target="_blank" rel="noopener">Ejercicios para tratar el dolor lumbar</a></li>
-          </ul>
-        </details>
-        <details class="card__details">
-          <summary>Lumbalgia</summary>
-          <ul class="links">
-            <li><a href="https://www.youtube.com/shorts/J5qhiruAPkA" target="_blank" rel="noopener">¿DOLOR LUMBAR? DUERMA ASÍ. (Short)</a></li>
-            <li><a href="https://www.youtube.com/watch?v=fAe3flSji_A&t=130s" target="_blank" rel="noopener">Video adicional</a></li>
-          </ul>
-        </details>
-        <details class="card__details">
-          <summary>Epicondilitis</summary>
-          <ul class="links">
-            <li><a href="https://www.youtube.com/watch?v=sVpEsb9Zvpo" target="_blank" rel="noopener">Ejercicios de rehabilitación - Clínico San Cecilio</a></li>
-          </ul>
-        </details>
-        <details class="card__details">
-          <summary>Estrés laboral y respiración</summary>
-          <p>Aprendamos a relajarnos mediante la respiración… Genera un ambiente con música suave, posición cómoda y ojos cerrados.</p>
-          <ol>
-            <li>Toma una respiración profunda y relajada, llenando la parte baja de tus pulmones sin forzar ni levantar hombros.</li>
-            <li>Exhala lentamente, dejando que todo el aire salga de tus pulmones.</li>
-            <li>Añade ritmo contando 1 a 5 mientras inhalas.</li>
-            <li>Inhala contando hasta 5, exhala hasta 5, mantén pulmones vacíos 2 segundos, repite.</li>
-            <li>Repite el proceso 10 veces.</li>
-          </ol>
-          <ul class="links">
-            <li><a href="https://www.youtube.com/watch?v=6LiMuJkp2Ig" target="_blank" rel="noopener">Video: Estrés laboral</a></li>
-            <li><a href="https://www.youtube.com/watch?v=oCGS6iBIfL8" target="_blank" rel="noopener">Respiración guiada</a></li>
-            <li><a href="https://www.youtube.com/watch?v=XT9VEY-pra0" target="_blank" rel="noopener">Relajación adicional</a></li>
-          </ul>
-        </details>
-      </article>
-
-      <!-- 4. Tu área de trabajo -->
-      <article id="area-trabajo" class="card card--area" data-tags="ergonomia puesto trabajo mouse silla monitor apoya pies higiene postural organizacion">
-        <h2 class="card__title">Tu área de trabajo</h2>
-        <details class="card__details" open>
-          <summary>Manejo del mouse</summary>
-          <p>Debe estar alineado con la parte inferior del teclado y lo más cerca posible para evitar sobrecargas en codo y hombro.</p>
-          <ul class="links">
-            <li><a href="https://www.youtube.com/watch?v=8-gZtDmDzcc" target="_blank" rel="noopener">Video 1</a></li>
-            <li><a href="https://www.youtube.com/watch?v=24_AmwBQK1w" target="_blank" rel="noopener">Video 2</a></li>
-          </ul>
-          <div class="inline-actions">
-            <button id="btn-galeria-mouse" class="btn btn-secondary" type="button" aria-expanded="false" aria-controls="galeria-mouse">Ver imágenes</button>
+          <!-- Sección de Tenosinovitis de Quervain -->
+          <div class="dme-section">
+            <h3>Tenosinovitis de Quervain</h3>
+            <ul class="links">
+              <li>
+                <a
+                  href="https://www.youtube.com/watch?v=sLsVETSKCJs"
+                  target="_blank"
+                  rel="noopener"
+                  >Tenosinovitis de Quervain</a
+                >
+              </li>
+            </ul>
+            <div class="inline-actions">
+              <button
+                id="btn-galeria-dme"
+                class="btn btn-secondary"
+                type="button"
+                aria-expanded="false"
+                aria-controls="galeria-dme"
+              >
+                Ver imagen
+              </button>
+            </div>
           </div>
-          <div id="galeria-mouse" class="gallery" hidden aria-live="polite"></div>
-        </details>
-        <details class="card__details">
-          <summary>Higiene postural</summary>
-          <p>Normas y recomendaciones para mantener una correcta alineación del cuerpo en actividades diarias.</p>
-          <ul class="links">
-            <li><a href="https://www.youtube.com/watch?v=G-_xykMIim4" target="_blank" rel="noopener">Video 1</a></li>
-            <li><a href="https://www.youtube.com/watch?v=ygcmGps4V2U" target="_blank" rel="noopener">Video 2</a></li>
-          </ul>
-          <div class="inline-actions">
-            <button id="btn-galeria-higiene" class="btn btn-secondary" type="button" aria-expanded="false" aria-controls="galeria-higiene">Ver imágenes</button>
+          <details class="card__details">
+            <summary>Síndrome del túnel del carpo</summary>
+            <ul class="links">
+              <li>
+                <a
+                  href="https://youtu.be/dOBJpkWx1hE?si=bTKCD_CltZlELJRo"
+                  target="_blank"
+                  rel="noopener"
+                  >Qué es, causas, síntomas y tratamiento</a
+                >
+              </li>
+            </ul>
+          </details>
+          <details class="card__details">
+            <summary>Dolor inespecífico en la espalda baja</summary>
+            <ul class="links">
+              <li>
+                <a
+                  href="https://youtu.be/pzYRCIdjJzw?si=eRCNhFOaKXNt4LNo"
+                  target="_blank"
+                  rel="noopener"
+                  >Ejercicios para tratar el dolor lumbar</a
+                >
+              </li>
+            </ul>
+          </details>
+          <details class="card__details">
+            <summary>Estrés laboral y respiración</summary>
+            <p>
+              Aprendamos a relajarnos mediante la respiración… Genera un
+              ambiente con música suave, posición cómoda y ojos cerrados.
+            </p>
+            <ol>
+              <li>
+                Toma una respiración profunda y relajada, llenando la parte baja
+                de tus pulmones sin forzar ni levantar hombros.
+              </li>
+              <li>
+                Exhala lentamente, dejando que todo el aire salga de tus
+                pulmones.
+              </li>
+              <li>Añade ritmo contando 1 a 5 mientras inhalas.</li>
+              <li>
+                Inhala contando hasta 5, exhala hasta 5, mantén pulmones vacíos
+                2 segundos, repite.
+              </li>
+              <li>Repite el proceso 10 veces.</li>
+            </ol>
+            <ul class="links">
+              <li>
+                <a
+                  href="https://www.youtube.com/watch?v=DMkE-rY0ffc"
+                  target="_blank"
+                  rel="noopener"
+                  >Video: Estrés laboral</a
+                >
+              </li>
+            </ul>
+          </details>
+          <div id="galeria-dme" class="gallery" hidden aria-live="polite">
+            <!-- Las imágenes se cargarán dinámicamente por JavaScript -->
           </div>
-          <div id="galeria-higiene" class="gallery" hidden aria-live="polite"></div>
-        </details>
-        <details class="card__details">
-          <summary>Organización del puesto de trabajo</summary>
-          <p>Cuida tu postura y organiza mejor tu trabajo. Considera puntos de contacto: mirada, manos/antebrazos, zona lumbar/pélvica y pies.</p>
-          <h3>Diseño físico del puesto</h3>
-          <ul>
-            <li>Superficie: profundidad 60-70 cm, largo 120-140 cm, altura regulable 62-75 cm.</li>
-            <li>Espacio para piernas: al menos 70 cm de ancho y 60-88 cm de profundidad.</li>
-            <li>Porta teclado: espacio mínimo 70 × 25 cm para teclado y mouse al mismo nivel.</li>
-          </ul>
-          <h3>Silla ergonómica</h3>
-          <ul>
-            <li>Altura asiento 38-50 cm; profundidad 38-45 cm; respaldo con soporte lumbar.</li>
-            <li>Inclinación del asiento 0–3°; ancho 40–45 cm; ángulo asiento-espalda 90–105°.</li>
-          </ul>
-          <h3>Computador portátil</h3>
-          <p>Usar teclado/mouse externos y soporte para elevar pantalla a la altura de los ojos; monitor adicional opcional.</p>
-          <h3>Mouse</h3>
-          <p>Ideal inalámbrico o con cable bien organizado. Tamaño acorde a la mano y sensibilidad ajustada.</p>
-          <h3>Apoyapiés</h3>
-          <p>Inclinación ajustable 5–15°, altura ajustable, mínimo 45 × 35 cm, superficies antideslizantes.</p>
-          <h3>Soporte de monitor</h3>
-          <p>Coloca la parte superior de la pantalla a la altura de los ojos para evitar flexión del cuello.</p>
-          <h3>Recomendaciones de la OMS</h3>
-          <p>Promueve pausas activas, variabilidad postural y ergonomía adecuada durante la jornada.</p>
-          <div class="inline-actions">
-            <button id="btn-galeria-organizacion" class="btn btn-secondary" type="button" aria-expanded="false" aria-controls="galeria-organizacion">Ver imágenes</button>
-          </div>
-          <div id="galeria-organizacion" class="gallery" hidden aria-live="polite"></div>
-        </details>
-      </article>
-    </section>
+        </article>
 
-    <section id="referencias" class="refs card">
-      <h2 class="card__title">Referencias</h2>
-      <ul>
-        <li>Icac. (2022, 22 noviembre). Higiene postural y hábitos saludables para cuidar de la espalda. <a href="https://columna.com/higiene-postural-y-habitos-saludables-para-cuidar-de-la-espalda/" target="_blank" rel="noopener">ICAC</a>.</li>
-        <li>Contreras Fonseca, K., C. (2025). Recomendaciones de pausas activas... <a href="https://repository.udca.edu.co/server/api/core/bitstreams/784b75cc-a880-4912-94cd-8019d3929ff8/content" target="_blank" rel="noopener">Universidad UDCA</a>.</li>
-        <li>Guía para la adecuación de lugar de trabajo con computador. <a href="https://appsweb.urosario.edu.co/cowork/assets/documentos/Infografico_Gu%C3%ADa%20de-ergonom%C3%ADa-en-el-lugar-de-trabajo.pdf" target="_blank" rel="noopener">U. Rosario</a>.</li>
-      </ul>
-    </section>
-  </main>
+        <!-- 4. Tu área de trabajo -->
+        <article
+          id="area-trabajo"
+          class="card card--area"
+          data-tags="ergonomia puesto trabajo mouse silla monitor apoya pies higiene postural organizacion"
+        >
+          <h2 class="card__title">Tu área de trabajo</h2>
+          <details class="card__details" open>
+            <summary>Manejo del mouse</summary>
+            <p>
+              Debe estar alineado con la parte inferior del teclado y lo más
+              cerca posible para evitar sobrecargas en codo y hombro.
+            </p>
+            <ul class="links">
+              <li>
+                <a
+                  href="https://www.youtube.com/watch?v=nmkKFqvhu6U"
+                  target="_blank"
+                  rel="noopener"
+                  >Video: Uso correcto del mouse</a
+                >
+              </li>
+            </ul>
+           
+           
+          </details>
+          <details class="card__details">
+            <summary>Higiene postural</summary>
+            <p>
+              Normas y recomendaciones para mantener una correcta alineación del
+              cuerpo en actividades diarias.
+            </p>
+            <ul class="links">
+              <li>
+                <a
+                  href="https://www.youtube.com/watch?v=BkCoiPmW5gw"
+                  target="_blank"
+                  rel="noopener"
+                  >Video: Higiene postural</a
+                >
+              </li>
+            </ul>
+            <div class="inline-actions">
+              <button
+                id="btn-galeria-higiene"
+                class="btn btn-secondary"
+                type="button"
+                aria-expanded="false"
+                aria-controls="galeria-higiene"
+              >
+                Ver imágenes
+              </button>
+            </div>
+            <div
+              id="galeria-higiene"
+              class="gallery"
+              hidden
+              aria-live="polite"
+            ></div>
+          </details>
+          <details class="card__details">
+            <summary>Organización del puesto de trabajo</summary>
+            <p>
+              Cuida tu postura y organiza mejor tu trabajo. Considera puntos de
+              contacto: mirada, manos/antebrazos, zona lumbar/pélvica y pies.
+            </p>
+            <h3>Diseño físico del puesto</h3>
+            <ul>
+              <li>
+                Superficie: profundidad 60-70 cm, largo 120-140 cm, altura
+                regulable 62-75 cm.
+              </li>
+              <li>
+                Espacio para piernas: al menos 70 cm de ancho y 60-88 cm de
+                profundidad.
+              </li>
+              <li>
+                Porta teclado: espacio mínimo 70 × 25 cm para teclado y mouse al
+                mismo nivel.
+              </li>
+            </ul>
+            <h3>Silla ergonómica</h3>
+            <ul>
+              <li>
+                Altura asiento 38-50 cm; profundidad 38-45 cm; respaldo con
+                soporte lumbar.
+              </li>
+              <li>
+                Inclinación del asiento 0–3°; ancho 40–45 cm; ángulo
+                asiento-espalda 90–105°.
+              </li>
+            </ul>
+            <h3>Computador portátil</h3>
+            <p>
+              Usar teclado/mouse externos y soporte para elevar pantalla a la
+              altura de los ojos; monitor adicional opcional.
+            </p>
+            <h3>Mouse</h3>
+            <p>
+              Ideal inalámbrico o con cable bien organizado. Tamaño acorde a la
+              mano y sensibilidad ajustada.
+            </p>
+            <h3>Apoyapiés</h3>
+            <p>
+              Inclinación ajustable 5–15°, altura ajustable, mínimo 45 × 35 cm,
+              superficies antideslizantes.
+            </p>
+            <h3>Soporte de monitor</h3>
+            <p>
+              Coloca la parte superior de la pantalla a la altura de los ojos
+              para evitar flexión del cuello.
+            </p>
+            <h3>Recomendaciones de la OMS</h3>
+            <p>
+              Promueve pausas activas, variabilidad postural y ergonomía
+              adecuada durante la jornada.
+            </p>
+            <div class="image-container">
+              <img
+                src="img/WhatsApp Image 2025-10-05 at 8.41.43 PM (4).jpeg"
+                alt="Recomendaciones de la OMS para pausas activas"
+                class="oms-image"
+              />
+              <img
+                src="img/WhatsApp Image 2025-10-05 at 8.41.44 PM.jpeg"
+                alt="Recomendaciones de la OMS para pausas activas"
+                class="oms-image"
+              />
+            </div>
+          </details>
+        </article>
+      </section>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Salud y Bienestar. Azul y blanco.</p>
-  </footer>
+      <section id="referencias" class="refs card">
+        <h2 class="card__title">Referencias</h2>
+        <ul>
+          <li>
+            Icac. (2022, 22 noviembre). Higiene postural y hábitos saludables
+            para cuidar de la espalda.
+            <a
+              href="https://columna.com/higiene-postural-y-habitos-saludables-para-cuidar-de-la-espalda/"
+              target="_blank"
+              rel="noopener"
+              >ICAC</a
+            >.
+          </li>
+          <li>
+            Contreras Fonseca, K., C. (2025). Recomendaciones de pausas
+            activas...
+            <a
+              href="https://repository.udca.edu.co/server/api/core/bitstreams/784b75cc-a880-4912-94cd-8019d3929ff8/content"
+              target="_blank"
+              rel="noopener"
+              >Universidad UDCA</a
+            >.
+          </li>
+          <li>
+            Guía para la adecuación de lugar de trabajo con computador.
+            <a
+              href="https://appsweb.urosario.edu.co/cowork/assets/documentos/Infografico_Gu%C3%ADa%20de-ergonom%C3%ADa-en-el-lugar-de-trabajo.pdf"
+              target="_blank"
+              rel="noopener"
+              >U. Rosario</a
+            >.
+          </li>
+        </ul>
+      </section>
+    </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Salud y Bienestar. Azul y blanco.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

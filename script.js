@@ -123,8 +123,9 @@
     'img/Imagen12.png','img/Imagen13.png','img/Imagen14.png','img/Imagen15.png','img/Imagen16.png','img/Imagen17.png','img/Imagen18.png','img/Imagen19.png','img/Imagen20.png','img/Imagen21.png','img/Imagen22.png','img/Imagen23.png'
   ], 'Gimnasia cerebral');
 
-  enableGallery('btn-galeria-dme','galeria-dme',[
-    'img/Imagen24.jpg','img/Imagen25.png','img/Imagen26.png'
+  // Galería de Prevención DME con una sola imagen
+  enableGallery('btn-galeria-dme', 'galeria-dme', [
+    'img/WhatsApp Image 2025-10-05 at 8.41.43 PM (3).jpeg'
   ], 'Prevención DME');
 
   // Área de trabajo - galerías por sección
@@ -133,12 +134,13 @@
   ], 'Manejo del mouse');
 
   enableGallery('btn-galeria-higiene','galeria-higiene',[
-    'img/Imagen32.png','img/Imagen33.png','img/Imagen34.png'
+    'img/WhatsApp Image 2025-10-05 at 8.41.43 PM (5).jpeg',
+    'img/WhatsApp Image 2025-10-05 at 8.41.43 PM (6).jpeg',
+    'img/WhatsApp Image 2025-10-05 at 8.41.43 PM (7).jpeg',
+    'img/WhatsApp Image 2025-10-05 at 8.41.43 PM (8).jpeg'
   ], 'Higiene postural');
 
-  enableGallery('btn-galeria-organizacion','galeria-organizacion',[
-    'img/Imagen35.png','img/Imagen36.png','img/Imagen37.png','img/Imagen38.png','img/Imagen39.png','img/Imagen40.png'
-  ], 'Organización del puesto de trabajo');
+  // Galería de organización del puesto de trabajo eliminada según solicitud
 
   function matches(card, q){
     if(!q) return true;
@@ -167,46 +169,4 @@
     });
   }
 
-  // Open external links safely in new tab already via HTML; ensure noopener for any dynamic links if added later
-  // Galería de Estiramientos
-  const btnGal = document.getElementById('btn-galeria-est');
-  const gal = document.getElementById('galeria-est');
-  if(btnGal && gal){
-    const files = [
-      'img/Imagen2.png',
-      'img/Imagen4.png',
-      'img/Imagen5.png',
-      'img/Imagen6.png',
-      'img/Imagen7.png',
-      'img/Imagen8.png',
-      'img/Imagen9.png',
-      'img/Imagen10.png',
-      'img/Imagen11.png'
-    ];
-    let loaded = false;
-    function build(){
-      if(loaded) return;
-      const frag = document.createDocumentFragment();
-      files.forEach((src,i)=>{
-        const fig = document.createElement('figure');
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = 'Estiramientos imagen ' + (i+1);
-        const cap = document.createElement('figcaption');
-        cap.textContent = 'Imagen ' + (i+1);
-        fig.appendChild(img);
-        fig.appendChild(cap);
-        frag.appendChild(fig);
-      });
-      gal.appendChild(frag);
-      loaded = true;
-    }
-    btnGal.addEventListener('click', ()=>{
-      const willOpen = gal.hasAttribute('hidden');
-      if(willOpen) build();
-      gal.toggleAttribute('hidden');
-      btnGal.setAttribute('aria-expanded', String(willOpen));
-      btnGal.textContent = willOpen ? 'Ocultar imágenes' : 'Ver imágenes';
-    });
-  }
 })();
